@@ -1,4 +1,4 @@
---loadstring(game:HttpGet(""))()
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/CloudDeve/MagicTrainingMacrosing-Not-My-/main/MT"))()
 
 local teclas = {
    ["E"] = "deletrius",
