@@ -1,0 +1,32 @@
+--loadstring(game:HttpGet(""))()
+
+local teclas = {
+   ["E"] = "deletrius",
+   ["R"] = "rennervate",
+   ["Y"] = "defodio",
+   ["Z"] = "duro",
+   ["X"] = "expulso",
+   ["B"] = "bombarda",
+   ["N"] = "avada kedavra",
+   ["M"] = "diffindo",
+   ["J"] = "expelliarmus",
+   ["K"] = "incarcerous",
+   ["L"] = "ebublio",
+   ["P"] = "ascendio",
+   ["C"] = "episkey",
+   ["V"] = "vulnera sanentur",
+   ["G"] = "glacius",
+   ["T"] = "tonitro",
+   ["U"] = "appa",
+   ["F"] = "carpe retractum"
+}
+
+game:GetService("UserInputService").InputBegan:Connect(function(iobj, gp)
+   if not gp then
+       local msg = teclas[iobj.KeyCode.Name]
+       if msg then
+           game.Players:Chat(msg)
+           game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(msg, "/c system")
+       end
+   end
+end)
